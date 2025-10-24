@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đêm Hội Bóng Đêm Halloween</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="content-page register-page">
+        <div class="fog-layer"></div> <h1 class="page-title glitch" data-text="ĐĂNG KÝ VÀO BÓNG ĐÊM">ĐĂNG KÝ VÀO BÓNG ĐÊM</h1>
+        <div class="form-container">
+            <form id="register-form" action="#" method="POST">    
+                <div class="form-group">
+                    <label for="name">Tên & Họ (Tên Ma):</label>
+                    <input type="text" id="name" name="name" placeholder="Ví dụ: Dracula, Cô Gái Đồ Long..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Hồi Đáp Ma Thuật:</label>
+                    <input type="email" id="email" name="email" placeholder="example@ghost.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="costume">Bạn muốn đóng vai sinh vật nào?</label>
+                    <select id="costume" name="costume" required>
+                        <option value="">-- Chọn một linh hồn --</option>
+                        <option value="vampire">Ma Cà Rồng 🧛</option>
+                        <option value="zombie">Xác Sống (Zombie) 🧟</option>
+                        <option value="witch">Phù Thủy/Pháp Sư 🧙</option>
+                        <option value="ghost">Hồn Ma Vô Hình 👻</option>
+                        <option value="other">Sinh Vật Khác</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Số lượng linh hồn đi cùng (tối đa 4):</label>
+                    <input type="number" id="guests" name="guests" min="0" max="4" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Lời Nguyền hoặc Yêu Cầu Đặc Biệt:</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Ví dụ: Tôi dị ứng với máu người, xin hãy chuẩn bị máu giả..." ></textarea>
+                </div>  
+                <div class="form-group" style="text-align: center;">
+                    <button type="submit" class="cta-button pulsing-glow">Ghi Danh!</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2025 - Dự án Halloween.<p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
