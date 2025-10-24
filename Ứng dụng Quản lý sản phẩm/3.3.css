@@ -1,0 +1,23 @@
+table {
+      width: 100%;
+      border-collapse: collapse;
+      border : none;
+}
+th, td {
+      padding: 10px;
+      text-align: left;
+      border: none; /*  Bỏ viền */
+}
+thead {
+      background-color: #f2f2f2;
+      font-weight: bold;
+}
+input, button {
+      padding: 5px 10px;
+      margin-top: 10px;
+}
+.header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
