@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lí Sản phẩm</title>
+  <link rel="stylesheet" href="3.3.css">
+</head>
+<body onload="show_product()">
+<script>
+  var product_list = ["Sony Xperia","Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4" , "Apple iPhone 6S" , "Xiaomi Mi 5s Plus" , "Apple iPhone 8 Plus" , "Pujitsu F-04E" , "Oppo A71" ];
+  function show_product() {
+    var table = "<table border='1' cellspacing='0' cellpadding='5'>";
+    for (var i = 0; i < product_list.length; i++) {
+      table += "<tr>";
+      table += "<td>" + product_list[i] + "</td>";
+      table += "<td><button onclick='edit_product(" + i + ")'>Edit</button></td>";
+      table += "<td><button onclick='delete_product(" + i + ")'>Delete</button></td>";
+      table += "</tr>";
+    }
+    table += "</tbody></table>";
+    document.getElementById("show_product_list").innerHTML = table;
+    document.getElementById("product_count").innerText = product_list.length;
+  }
+  function add_product() {
+    var newProduct = document.getElementById("add_product").value;
+    if (newProduct !== "") {
+      product_list.push(newProduct);
+      show_product();
+      document.getElementById("add_product").value = "";
+    }
+  }
+  function delete_product(index) {
+    product_list.splice(index, 1);
+    show_product();
+  }
+  function edit_product(index) {
+    var newName = prompt("Nhập tên mới cho sản phẩm:", product_list[index]);
+    if (newName !== null && newName !== "") {
+      product_list[index] = newName;
+      show_product();
+    }
+  }
+</script>
+<h2>Add New Product</h2>
+<input type="text" id="add_product" placeholder="New Prodcut">
+<button onclick="add_product()">Add</button>
+<h2>Display All Product</h2>
+<div class="header-row">
+  <span><strong>Product Name</strong></span>
+  <span><strong><span id="product_count"></span> products</strong></span>
+</div>
+<div id="show_product_list"></div>
+</body>
+</html>
